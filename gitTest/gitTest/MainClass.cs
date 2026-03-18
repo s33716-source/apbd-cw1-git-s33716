@@ -6,11 +6,13 @@ namespace gitTest
     {
         public static void Main(string[] args)
         {
+            
+            
             while(true)
             {
                 string input = "end";
                 uint n;
-                Console.WriteLine("Gimme a long so I can turn it into a fib. Type \"end\" to quit.");
+                Console.WriteLine("Gimme a long so I can turn it into a fib. Type \"end\" to quit. Type \"bee\" instead for bee movie.");
                 try
                 {
                     input = Console.ReadLine();
@@ -20,6 +22,11 @@ namespace gitTest
                 {
                     if(input == "end")
                         break;
+                    if(input == "bee")
+                    {
+                        BeeMovieReader();
+                        break;
+                    }
                     Console.WriteLine("Input provided is invalid.");
                     continue;
                 }
@@ -44,6 +51,12 @@ namespace gitTest
                 i2 = tmp;
             }
             return i2;
+        }
+
+        public static void BeeMovieReader()
+        {
+            StreamReader sr = new("../../../beemovie.txt");
+            Console.WriteLine(sr.ReadToEnd());
         }
     }
 }
