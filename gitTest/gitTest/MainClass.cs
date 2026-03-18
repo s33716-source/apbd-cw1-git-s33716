@@ -61,5 +61,10 @@ namespace gitTest
         {
             return (double)values.Sum() / values.Length;
         }
+
+        public static int CalculateMax(int[] values)
+        {
+            return values.Max();
+        }
     }
 }
