@@ -6,8 +6,6 @@ namespace gitTest
     {
         public static void Main(string[] args)
         {
-            
-            
             while(true)
             {
                 string input = "end";
@@ -57,6 +55,11 @@ namespace gitTest
         {
             StreamReader sr = new("../../../beemovie.txt");
             Console.WriteLine(sr.ReadToEnd());
+        }
+
+        public static double CalculateAverage(int[] values)
+        {
+            return (double)values.Sum() / values.Length;
         }
     }
 }
