@@ -6,7 +6,26 @@ namespace gitTest
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine(Fib(10));
+            while(true)
+            {
+                string input = "end";
+                uint n;
+                Console.WriteLine("Gimme a long so I can turn it into a fib. Type \"end\" to quit.");
+                try
+                {
+                    input = Console.ReadLine();
+                    n = uint.Parse(input);
+                }
+                catch(Exception e)
+                {
+                    if(input == "end")
+                        break;
+                    Console.WriteLine("Input provided is invalid.");
+                    continue;
+                }
+                
+                Console.WriteLine($"The nth fib number is {Fib(n)}");
+            }
         }
 
         public static ulong Fib(uint n)
