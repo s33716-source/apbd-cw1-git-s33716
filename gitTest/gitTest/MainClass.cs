@@ -66,7 +66,12 @@ namespace gitTest
         {
             return values.Max();
         }
-
+        
+        public static int CalculateMin(int[] values)
+        {
+            return values.Min();
+        }
+        
         public static void DoNothingAtAll()
         {
             
