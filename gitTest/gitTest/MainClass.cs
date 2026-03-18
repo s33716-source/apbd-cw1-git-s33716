@@ -69,6 +69,7 @@ namespace gitTest
         
         public static int CalculateMin(int[] values)
         {
+            Console.WriteLine("lol you cant use the Min() function stupid");
             return values.Min();
         }
         
