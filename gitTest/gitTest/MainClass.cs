@@ -66,5 +66,10 @@ namespace gitTest
         {
             return values.Max();
         }
+
+        public static void DoNothingAtAll()
+        {
+            
+        }
     }
 }
